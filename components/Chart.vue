@@ -5,33 +5,27 @@
     baseProfile="full"
     width="100"
     height="50"
+    viewBox="0 0 100 50"
     xmlns="http://www.w3.org/2000/svg">
 
-    <rect
-      width="100%"
-      height="100%"
-      fill="red" />
-
-    <circle
-      cx="150"
-      cy="100"
-      r="80"
-      fill="green" />
-
-    <text
-      x="150"
-      y="125"
-      font-size="60"
-      text-anchor="middle"
-      fill="white">
-      SVG2
-    </text>
+    <Countries/>
   </svg>
 </template>
+
+<script>
+  import Countries from '~/components/Countries'
+
+  export default {
+    components: {
+      Countries
+    }
+  }
+</script>
 
 <style>
   .main {
     width: 100%;
     height: auto;
+    border: 1px solid green;
   }
 </style>
