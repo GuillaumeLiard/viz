@@ -1,7 +1,7 @@
 export const state = () => ({
   config: {
     containerWidth: 100,
-    spaceBetweenTotal: 10
+    spaceBetweenTotalWidth: 10
   },
   list:[
     {
@@ -18,28 +18,26 @@ export const state = () => ({
 })
 
 export const getters = {
-  getCountryList(state) {
+  list(state) {
     return state.list
   },
-  getCount(state) {
+  count(state) {
     return state.list.length
   },
-  getCountryWidth(state, { getCount }) {
-    const { containerWidth, spaceBetweenTotal } = state.config
-    return getCount > 0 ? ((containerWidth - spaceBetweenTotal)) / getCount : 0
+  itemWidth(state, { count }) {
+    const { containerWidth, spaceBetweenTotalWidth } = state.config
+    return count > 0 ? ((containerWidth - spaceBetweenTotalWidth)) / count : 0
   },
-  getSpaceBetween(state, { getCount }) {
-    const { spaceBetweenTotal } = state.config
-    return getCount > 0 ?  spaceBetweenTotal / (getCount - 1) : 0
+  spaceBetween(state, { count }) {
+    const { spaceBetweenTotalWidth } = state.config
+    return count > 0 ?  spaceBetweenTotalWidth / (count - 1) : 0
   },
-  get(state, { getCountryList, getCountryWidth, getSpaceBetween }) {
-    return getCountryList.map((country, index) => {
-      const { marginLeft, spaceBetween } = state.config
-      // const width = getters.getCountryWidth
+  get(state, { list, itemWidth, spaceBetween }) {
+    return list.map((item, index) => {
       return {
-        name: country.name,
-        width: getCountryWidth,
-        x: (getCountryWidth + getSpaceBetween) * index,
+        name: item.name,
+        width: itemWidth,
+        x: (itemWidth + spaceBetween) * index,
       }
     })
   }
