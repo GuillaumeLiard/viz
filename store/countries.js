@@ -23,10 +23,15 @@ export const getters = {
   getCount(state) {
     return state.list.length
   },
-  getCountryWidth(state, getters) {
+  spaceBetweenTotal(state, getters) {
     const { spaceBetween, containerWidth } = state.config
     const count = getters.getCount
-    return count > 0 ? ((containerWidth - ((count - 1) * spaceBetween))) / count : 0
+    return count > 1 ? ((count - 1) * spaceBetween) : 0
+  },
+  getCountryWidth(state, getters) {
+    const { containerWidth } = state.config
+    const { getCount, spaceBetweenTotal} = getters
+    return getCount > 0 ? ((containerWidth - spaceBetweenTotal)) / getCount : 0
   },
   get(state, getters) {
     return getters.getCountryList.map((country, index) => {
