@@ -1,17 +1,18 @@
 <template>
   <svg
+    :viewBox="viewBoxString"
     class="main"
     version="1.1"
     baseProfile="full"
     width="100"
     height="50"
-    viewBox="0 0 100 50"
     xmlns="http://www.w3.org/2000/svg">
 
     <!-- <Countries/> -->
     <Box
       :nodes="nodes"
       :label="label"
+      :contentBoundingBox="viewBoxObject"
     />
   </svg>
 </template>
@@ -25,6 +26,18 @@
     components: {
       // Countries
       Box
+    },
+    data: function() {
+      return {
+        // todo merge
+        viewBoxString: "0 0 100 50",
+        viewBoxObject: {
+          x: 0,
+          y: 0,
+          width: 100,
+          height: 50
+        }
+      }
     },
     computed: {
       ...mapGetters({
