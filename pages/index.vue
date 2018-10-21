@@ -25,12 +25,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  &::before {
-    content: '';
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-  }
 }
 
 .content {
