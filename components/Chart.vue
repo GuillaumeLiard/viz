@@ -22,7 +22,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .main {
     width: 100%;
     height: auto;

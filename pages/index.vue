@@ -16,7 +16,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '~assets/variables.scss';
 
 .container {
   min-height: 100vh;
@@ -24,9 +25,15 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  &::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+  }
 }
 
 .content {
-  width: 500px;  
+  width: $viz-width;
 }
 </style>
