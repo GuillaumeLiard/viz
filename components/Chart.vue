@@ -8,16 +8,29 @@
     viewBox="0 0 100 50"
     xmlns="http://www.w3.org/2000/svg">
 
-    <Countries/>
+    <!-- <Countries/> -->
+    <Box
+      :nodes="nodes"
+      :label="label"
+    />
   </svg>
 </template>
 
 <script>
-  import Countries from '~/components/Countries'
+  import { mapGetters } from 'vuex'
+  // import Countries from '~/components/Countries'
+  import Box from '~/components/Box'
 
   export default {
     components: {
-      Countries
+      // Countries
+      Box
+    },
+    computed: {
+      ...mapGetters({
+        label: 'tree/getLabel',
+        nodes: 'tree/getNodes'
+      }),
     }
   }
 </script>
