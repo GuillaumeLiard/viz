@@ -2,17 +2,17 @@ export const state = () => ({
   levels: [
     {
       direction: 'h',
-      percentFilledSpace: 0.7,
+      percentFilledSpace: 1,
       distributionType: 'spaceBetween'
     },
     {
       direction: 'h',
-      percentFilledSpace: 0.7,
-      distributionType: 'spaceBetween'
+      percentFilledSpace: 0.4,
+      distributionType: 'spaceAround'
     },
     {
-      direction: 'h',
-      percentFilledSpace: 0.9,
+      direction: 'v',
+      percentFilledSpace: 0.99,
       distributionType: 'spaceBetween'
     },
   ]

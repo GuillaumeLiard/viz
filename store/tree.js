@@ -12,9 +12,11 @@ export const state = () => ({
           nodes: [
             {
               label: "item1",
+              color: "red"
             },
             {
               label: "item1",
+              color: "green"
             }
           ]
         },
@@ -23,9 +25,11 @@ export const state = () => ({
           nodes: [
             {
               label: "item1",
+              color: "red"
             },
             {
               label: "item1",
+              color: "green"
             }
           ]
         }
@@ -43,9 +47,11 @@ export const state = () => ({
               nodes: [
                 {
                   label: "item1",
+                  color: "red"
                 },
                 {
                   label: "item1",
+                  color: "green"
                 }
               ]
             },
@@ -54,9 +60,11 @@ export const state = () => ({
               nodes: [
                 {
                   label: "item1",
+                  color: "red"
                 },
                 {
                   label: "item1",
+                  color: "green"
                 }
               ]
             }
@@ -70,9 +78,11 @@ export const state = () => ({
               nodes: [
                 {
                   label: "item1",
+                  color: "red"
                 },
                 {
                   label: "item1",
+                  color: "green"
                 }
               ]
             },
@@ -81,16 +91,41 @@ export const state = () => ({
               nodes: [
                 {
                   label: "item1",
+                  color: "red"
                 },
                 {
                   label: "item1",
+                  color: "green"
                 }
               ]
             }
           ]
         }
       ]
-    }
+    },
+    {
+      label: "root3",
+      nodes: [
+        {
+          label: "item1",
+          color: "red",
+          nodes: [
+            {
+              label: "item1",
+              color: "red"
+            },
+            {
+              label: "item1",
+              color: "blue"
+            },
+            {
+              label: "item1",
+              color: "green"
+            }
+          ]
+        }
+      ]
+    },
   ]
 });
 
@@ -100,5 +135,5 @@ export const getters = {
 };
 
 export const mutations = {
-  nextChoice: state => state.choice ? state.choice = 0 : state.choice = 1
+  nextChoice: state => state.choice = (state.choice + 1) % 3
 };

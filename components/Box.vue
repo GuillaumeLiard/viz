@@ -8,6 +8,7 @@
         :depth="depth + 1"
         :key="index"
         :nodes="node.nodes"
+        :color="node.color"
         :content-box="childContentBox(index)">
         <!-- {{ label }} -->
       </Box>
@@ -19,7 +20,7 @@
         :height="contentBox.height"
         :x="contentBox.x"
         :y="contentBox.y"
-        fill="green" />
+        :fill="color" />
     </transition>
   </g>
 </template>
@@ -41,6 +42,10 @@
       label: {
         type: String,
         default: ''
+      },
+      color: {
+        type: String,
+        default: 'green'
       },
       contentBox: {
         type: Object,
@@ -119,5 +124,8 @@
   .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
     opacity: 0;
     transform: translateY(30px);
+  }
+  .list-move {
+    transition: transform 1s;
   }
   </style>

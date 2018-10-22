@@ -40,6 +40,7 @@
     computed: {
       ...mapGetters({
         label: 'tree/getLabel',
+        color: 'tree/getColor',
         nodes: 'tree/getNodes'
       }),
     },
