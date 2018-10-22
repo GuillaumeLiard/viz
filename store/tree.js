@@ -1,15 +1,36 @@
 export const state = () => ({
-  label: "root",
-  weight: 1
   // label: "root",
-  // nodes: [
-  //   {
-  //     label: "item1",
-  //   },
-  //   {
-  //     label: "item2"
-  //   }
-  // ]
+  // weight: 1
+  label: "root",
+  nodes: [
+    {
+      label: "item1",
+    },
+    {
+      label: "item1",
+    },
+    {
+      label: "item1",
+    },
+    {
+      label: "item1",
+    },
+    {
+      label: "item1",
+    },
+    {
+      label: "item1",
+    },
+    {
+      label: "item1",
+    },
+    {
+      label: "item1",
+    },
+    {
+      label: "item2"
+    }
+  ]
   // nodes: [
   //   {
   //     label: "item1",

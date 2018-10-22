@@ -12,7 +12,7 @@
     <Box
       :nodes="nodes"
       :label="label"
-      :contentBoundingBox="viewBoxObject"
+      :content-box="viewBoxObject"
     />
   </svg>
 </template>
@@ -27,7 +27,7 @@
       // Countries
       Box
     },
-    data: function() {
+    data: () => {
       return {
         // todo merge
         viewBoxString: "0 0 100 50",
