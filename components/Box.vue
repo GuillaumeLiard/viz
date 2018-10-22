@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import { evenlySpaced1d } from '~/assets/js/grid.js'
+  import { spaceAround, spaceBetween } from '~/assets/js/grid.js'
 
   export default {
     name: 'Box',
@@ -56,13 +56,19 @@
       percentFilledSpace: function() {
         return this.$store.getters['viz/percentFilledSpaceByDepth'](this.depth)
       },
+      distributionType: function() {
+        return this.$store.getters['viz/distributionTypeByDepth'](this.depth)
+      },
+      makeCoord: function() {
+        return (this.distributionType === 'spaceAround') ? spaceAround : spaceBetween
+      },
       availableSpace1d: function() {
         return (this.direction === 'h') ? this.contentBox.width : this.contentBox.height
       },
     },
     methods: {
       childContentBox: function(itemIndex) {
-        const coord = evenlySpaced1d(this.availableSpace1d, this.itemsCount, this.percentFilledSpace, itemIndex)
+        const coord = this.makeCoord(this.availableSpace1d, this.itemsCount, this.percentFilledSpace, itemIndex)
 
         if (this.direction === 'h') {
           return {

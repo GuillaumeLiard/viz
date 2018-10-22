@@ -2,11 +2,15 @@ export const state = () => ({
   levels: [
     {
       direction: 'h',
-      percentFilledSpace: 0.9
+      percentFilledSpace: 0.7,
+      distributionType: 'spaceBetween'
+      // distributionType: 'spaceBetween'
     },
     {
       direction: 'h',
-      percentFilledSpace: 0.8
+      percentFilledSpace: 0.7,
+      // distributionType: 'spaceAround'
+      distributionType: 'spaceBetween'
     }
   ]
 })
@@ -18,6 +22,10 @@ export const getters = {
   },
   percentFilledSpaceByDepth: state => depth => {
     const p = state.levels[depth].percentFilledSpace
+    return p ? p : 100
+  },
+  distributionTypeByDepth: state => depth => {
+    const p = state.levels[depth].distributionType
     return p ? p : 100
   }
 }
