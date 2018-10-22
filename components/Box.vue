@@ -46,15 +46,15 @@
         })
       },
     },
-    data: () => ({
-      percentFilledSpace: 0.5
-    }),
     computed: {
       itemsCount: function() {
         return this.nodes.length
       },
       direction: function() {
         return this.$store.getters['viz/directionByDepth'](this.depth)
+      },
+      percentFilledSpace: function() {
+        return this.$store.getters['viz/percentFilledSpaceByDepth'](this.depth)
       },
       availableSpace1d: function() {
         return (this.direction === 'h') ? this.contentBox.width : this.contentBox.height
