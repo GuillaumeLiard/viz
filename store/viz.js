@@ -6,7 +6,7 @@ export const state = () => ({
     },
     {
       direction: 'h',
-      percentFilledSpace: 0.99
+      percentFilledSpace: 0.8
     }
   ]
 })
