@@ -1,20 +1,26 @@
 <template lang="html">
   <g class="box">
-    <Box
-      v-for="(node, index) in nodes"
-      :depth="depth + 1"
-      :key="index"
-      :nodes="node.nodes"
-      :content-box="childContentBox(index)">
-      <!-- {{ label }} -->
-    </Box>
-    <rect
-      v-if="!nodes.length"
-      :width="contentBox.width"
-      :height="contentBox.height"
-      :x="contentBox.x"
-      :y="contentBox.y"
-      fill="red" />
+    <transition-group
+      name="list"
+      tag="g">
+      <Box
+        v-for="(node, index) in nodes"
+        :depth="depth + 1"
+        :key="index"
+        :nodes="node.nodes"
+        :content-box="childContentBox(index)">
+        <!-- {{ label }} -->
+      </Box>
+    </transition-group>
+    <transition name="fade">
+      <rect
+        v-if="!nodes.length"
+        :width="contentBox.width"
+        :height="contentBox.height"
+        :x="contentBox.x"
+        :y="contentBox.y"
+        fill="green" />
+    </transition>
   </g>
 </template>
 
@@ -91,4 +97,27 @@
 </script>
 
 <style scoped lang="scss">
-</style>
+  .fade-enter-active {
+    transition: all 0.8s ease;
+  }
+  .fade-leave-active {
+    transition: all 0.4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .fade-enter, .fade-leave-to
+    /* .fade-leave-active below version 2.1.8 */ {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  .list-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .list-enter-active, .list-leave-active {
+    transition: all 1s;
+  }
+  .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  </style>

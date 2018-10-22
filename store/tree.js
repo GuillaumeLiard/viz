@@ -1,70 +1,104 @@
 export const state = () => ({
   // label: "root",
   // weight: 1
+  choice: 0,
   label: "root",
-  nodes: [
+  choices: [
     {
-      label: "item1",
+      label: "root1",
       nodes: [
         {
           label: "item1",
+          nodes: [
+            {
+              label: "item1",
+            },
+            {
+              label: "item1",
+            }
+          ]
         },
         {
           label: "item1",
+          nodes: [
+            {
+              label: "item1",
+            },
+            {
+              label: "item1",
+            }
+          ]
         }
+
       ]
     },
     {
-      label: "item1",
+      label: "root2",
       nodes: [
         {
           label: "item1",
+          nodes: [
+            {
+              label: "item1",
+              nodes: [
+                {
+                  label: "item1",
+                },
+                {
+                  label: "item1",
+                }
+              ]
+            },
+            {
+              label: "item1",
+              nodes: [
+                {
+                  label: "item1",
+                },
+                {
+                  label: "item1",
+                }
+              ]
+            }
+          ]
         },
         {
           label: "item1",
+          nodes: [
+            {
+              label: "item1",
+              nodes: [
+                {
+                  label: "item1",
+                },
+                {
+                  label: "item1",
+                }
+              ]
+            },
+            {
+              label: "item1",
+              nodes: [
+                {
+                  label: "item1",
+                },
+                {
+                  label: "item1",
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ]
-  // nodes: [
-  //   {
-  //     label: "item1",
-  //   },
-  //   {
-  //     label: "item1",
-  //   },
-  //   {
-  //     label: "item1",
-  //   },
-  //   {
-  //     label: "item1",
-  //   }
-  // ]
-  // nodes: [
-  //   {
-  //     label: "item1",
-  //     nodes: [
-  //       {
-  //         label: "item1.1"
-  //       },
-  //       {
-  //         label: "item1.2",
-  //         nodes: [
-  //           {
-  //             label: "item1.2.1",
-  //             value: 5
-  //           }
-  //         ]
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     label: "item2"
-  //   }
-  // ]
 });
 
 export const getters = {
-  getLabel: state => state.label,
-  getNodes: state => state.nodes
+  getLabel: state => state.choices[state.choice].label,
+  getNodes: state => state.choices[state.choice].nodes
+};
+
+export const mutations = {
+  nextChoice: state => state.choice ? state.choice = 0 : state.choice = 1
 };

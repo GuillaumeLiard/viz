@@ -6,7 +6,8 @@
     baseProfile="full"
     width="100"
     height="50"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+    @click="nextChoice">
 
     <!-- <Countries/> -->
     <Box
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapMutations } from 'vuex'
   // import Countries from '~/components/Countries'
   import Box from '~/components/Box'
 
@@ -43,6 +44,11 @@
       ...mapGetters({
         label: 'tree/getLabel',
         nodes: 'tree/getNodes'
+      }),
+    },
+    methods: {
+      ...mapMutations({
+        nextChoice: 'tree/nextChoice'
       }),
     }
   }
