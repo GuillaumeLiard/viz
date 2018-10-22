@@ -14,21 +14,6 @@ export const state = () => ({
     },
     {
       label: "item1",
-    },
-    {
-      label: "item1",
-    },
-    {
-      label: "item1",
-    },
-    {
-      label: "item1",
-    },
-    {
-      label: "item1",
-    },
-    {
-      label: "item2"
     }
   ]
   // nodes: [

@@ -2,6 +2,7 @@
   <g class="box">
     <Box
       v-for="(node, index) in nodes"
+      :depth="depth + 1"
       :key="index"
       :nodes="node.nodes"
       :content-box="computeSpace(index)">
@@ -23,6 +24,10 @@
   export default {
     name: 'Box',
     props: {
+      depth: {
+        type: Number,
+        default: 0
+      },
       nodes: {
         type: Array,
         default: () => []
@@ -47,17 +52,30 @@
     computed: {
       itemsCount: function() {
         return this.nodes.length
+      },
+      direction: function() {
+        return this.$store.getters['viz/directionByDepth'](this.depth)
       }
     },
     methods: {
       computeSpace: function(itemIndex) {
-        const availableSpace = this.contentBox.width
+        const availableSpace = (this.direction === 'h') ? this.contentBox.width : this.contentBox.height
         const coord = evenlySpaced1d(availableSpace, this.itemsCount, this.percentFilledSpace, itemIndex)
-        return {
-          width: coord.itemSpace,
-          height: '100%',
-          x: coord.itemPosition,
-          y: 0,
+
+        if (this.direction === 'h') {
+          return {
+            width: coord.itemSpace,
+            height: '100%',
+            x: coord.itemPosition,
+            y: 0,
+          }
+        } else {
+          return {
+            width: '100%',
+            height: coord.itemSpace,
+            x: 0,
+            y: coord.itemPosition,
+          }
         }
       }
     }
