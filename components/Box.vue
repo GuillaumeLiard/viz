@@ -5,7 +5,7 @@
       :depth="depth + 1"
       :key="index"
       :nodes="node.nodes"
-      :content-box="computeSpace(index)">
+      :content-box="childContentBox(index)">
       <!-- {{ label }} -->
     </Box>
     <rect
@@ -47,7 +47,7 @@
       },
     },
     data: () => ({
-      percentFilledSpace: 0.8
+      percentFilledSpace: 0.5
     }),
     computed: {
       itemsCount: function() {
@@ -55,26 +55,28 @@
       },
       direction: function() {
         return this.$store.getters['viz/directionByDepth'](this.depth)
-      }
+      },
+      availableSpace1d: function() {
+        return (this.direction === 'h') ? this.contentBox.width : this.contentBox.height
+      },
     },
     methods: {
-      computeSpace: function(itemIndex) {
-        const availableSpace = (this.direction === 'h') ? this.contentBox.width : this.contentBox.height
-        const coord = evenlySpaced1d(availableSpace, this.itemsCount, this.percentFilledSpace, itemIndex)
+      childContentBox: function(itemIndex) {
+        const coord = evenlySpaced1d(this.availableSpace1d, this.itemsCount, this.percentFilledSpace, itemIndex)
 
         if (this.direction === 'h') {
           return {
             width: coord.itemSpace,
-            height: '100%',
-            x: coord.itemPosition,
-            y: 0,
+            height: this.contentBox.height,
+            x: this.contentBox.x + coord.itemPosition,
+            y: this.contentBox.y
           }
         } else {
           return {
-            width: '100%',
+            width: this.contentBox.width,
             height: coord.itemSpace,
-            x: 0,
-            y: coord.itemPosition,
+            x: this.contentBox.x,
+            y: this.contentBox.y + coord.itemPosition,
           }
         }
       }

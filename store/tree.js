@@ -5,17 +5,41 @@ export const state = () => ({
   nodes: [
     {
       label: "item1",
+      nodes: [
+        {
+          label: "item1",
+        },
+        {
+          label: "item1",
+        }
+      ]
     },
     {
       label: "item1",
-    },
-    {
-      label: "item1",
-    },
-    {
-      label: "item1",
+      nodes: [
+        {
+          label: "item1",
+        },
+        {
+          label: "item1",
+        }
+      ]
     }
   ]
+  // nodes: [
+  //   {
+  //     label: "item1",
+  //   },
+  //   {
+  //     label: "item1",
+  //   },
+  //   {
+  //     label: "item1",
+  //   },
+  //   {
+  //     label: "item1",
+  //   }
+  // ]
   // nodes: [
   //   {
   //     label: "item1",
