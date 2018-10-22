@@ -9,7 +9,6 @@
     xmlns="http://www.w3.org/2000/svg"
     @click="nextChoice">
 
-    <!-- <Countries/> -->
     <Box
       :nodes="nodes"
       :label="label"
@@ -20,12 +19,10 @@
 
 <script>
   import { mapGetters, mapMutations } from 'vuex'
-  // import Countries from '~/components/Countries'
   import Box from '~/components/Box'
 
   export default {
     components: {
-      // Countries
       Box
     },
     data: () => {
