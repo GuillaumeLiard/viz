@@ -2,21 +2,24 @@
 
 > Universal visualization using nuxt &amp; svg
 
+# svg server and client side rendered
+# nuxtjs, vuejs, svg
+
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ yarn install
+$ npm install
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ npm start
 
 # build for production and launch server
-$ yarn run build
-$ yarn start
+$ npm run build-server
+$ npm run start-server
 
 # generate static project
-$ yarn run generate
+$ npm run build
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
