@@ -33,7 +33,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/variables.scss'
+    '~/assets/variables.scss',
+    'animate.css',
   ],
 
   /*
