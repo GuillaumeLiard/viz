@@ -38,7 +38,7 @@ export default {
   }
 }
 </script>
-<style media="screen">
+<style scoped lang="scss">
   h1 {
 
     display: block;

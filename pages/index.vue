@@ -2,19 +2,19 @@
   <section class="container">
     <div class="content">
       <Chart/>
-      <d3component/>
+      <componentAnimated/>
     </div>
   </section>
 </template>
 
 <script>
 import Chart from '~/components/Chart.vue'
-import d3component from '~/components/d3component.vue'
+import componentAnimated from '~/components/componentAnimated.vue'
 
 export default {
   components: {
     Chart,
-    d3component
+    componentAnimated
   }
 }
 </script>

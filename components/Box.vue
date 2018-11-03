@@ -13,7 +13,9 @@
         <!-- {{ label }} -->
       </Box>
     </transition-group>
-    <transition name="fade">
+    <transition
+      name="fade"
+      mode="in-out">
       <rect
         v-if="!nodes.length"
         :width="contentBox.width"
