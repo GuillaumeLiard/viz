@@ -105,10 +105,10 @@
 
 <style scoped lang="scss">
   .fade-enter-active {
-    transition: all 0.8s ease;
+    transition: all 0.4s ease;
   }
   .fade-leave-active {
-    transition: all 0.4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all 0.2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   }
   .fade-enter, .fade-leave-to
     /* .fade-leave-active below version 2.1.8 */ {
@@ -121,13 +121,13 @@
     margin-right: 10px;
   }
   .list-enter-active, .list-leave-active {
-    transition: all 1s;
+    transition: all 0.5s;
   }
   .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
     opacity: 0;
     transform: translateY(30px);
   }
   .list-move {
-    transition: transform 1s;
+    transition: transform 0.5s;
   }
   </style>

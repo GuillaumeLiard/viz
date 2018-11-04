@@ -1,6 +1,8 @@
 import tree1 from '~/static/dummyData/tree/1.js'
 import tree2 from '~/static/dummyData/tree/2.js'
 import tree3 from '~/static/dummyData/tree/3.js'
+import tree4 from '~/static/dummyData/tree/4.js'
+import tree5 from '~/static/dummyData/tree/5.js'
 
 export const state = () => ({
   // label: "root",
@@ -11,6 +13,8 @@ export const state = () => ({
     tree1,
     tree2,
     tree3,
+    tree4,
+    tree5,
   ]
 });
 

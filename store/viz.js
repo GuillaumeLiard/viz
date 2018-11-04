@@ -7,13 +7,43 @@ export const state = () => ({
     },
     {
       direction: 'h',
+      percentFilledSpace: 0.6,
+      distributionType: 'spaceAround'
+    },
+    {
+      direction: 'v',
+      percentFilledSpace: 0.618,
+      distributionType: 'spaceBetween'
+    },
+    {
+      direction: 'h',
       percentFilledSpace: 0.4,
       distributionType: 'spaceAround'
     },
     {
       direction: 'v',
-      percentFilledSpace: 0.99,
+      percentFilledSpace: 0.141,
       distributionType: 'spaceBetween'
+    },
+    {
+      direction: 'h',
+      percentFilledSpace: 0.5,
+      distributionType: 'spaceAround'
+    },
+    {
+      direction: 'h',
+      percentFilledSpace: 0.5,
+      distributionType: 'spaceAround'
+    },
+    {
+      direction: 'h',
+      percentFilledSpace: 0.5,
+      distributionType: 'spaceAround'
+    },
+    {
+      direction: 'h',
+      percentFilledSpace: 0.5,
+      distributionType: 'spaceAround'
     },
   ]
 })
