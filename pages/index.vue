@@ -2,19 +2,19 @@
   <section class="container">
     <div class="content">
       <Chart/>
-      <componentAnimated/>
+      <!-- <componentAnimated/> -->
     </div>
   </section>
 </template>
 
 <script>
 import Chart from '~/components/Chart.vue'
-import componentAnimated from '~/components/componentAnimated.vue'
+// import componentAnimated from '~/components/componentAnimated.vue'
 
 export default {
   components: {
     Chart,
-    componentAnimated
+    // componentAnimated
   }
 }
 </script>

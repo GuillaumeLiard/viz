@@ -4,7 +4,6 @@
     <transition
       enter-active-class="animated fadeIn"
       leave-active-class="animated rubberBand"
-      appear-active-class="animated rubberBand"
     >
       <h1 v-if="show">About</h1>
     </transition>
