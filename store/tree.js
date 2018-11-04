@@ -7,7 +7,7 @@ import tree5 from '~/static/dummyData/tree/5.js'
 export const state = () => ({
   // label: "root",
   // weight: 1
-  choice: 0,
+  choice: 3,
   label: "root",
   choices: [
     tree1,
