@@ -1,17 +1,26 @@
 <template>
   <section class="container">
     <div class="content">
-      <D3component/>
+      <h2>
+        BlueBox d3 client side
+      </h2>
+      <BlueBox/>
+      <h2>
+        BlueBox Universal
+      </h2>
+      <BlueBoxUniversal/>
     </div>
   </section>
 </template>
 
 <script>
-import D3component from '~/components/d3/BlueBox.vue'
+import BlueBox from '~/components/d3/BlueBox.vue'
+import BlueBoxUniversal from '~/components/d3/BlueBoxUniversal.vue'
 
 export default {
   components: {
-    D3component
+    BlueBox,
+    BlueBoxUniversal
   },
   data: function() {
     return {
