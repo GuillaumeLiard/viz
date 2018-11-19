@@ -1,7 +1,12 @@
 <template>
   <section class="container">
+    <nuxt-link
+      class="toD3"
+      to="/d3">goto d3 components
+    </nuxt-link>
     <div class="content">
       <Chart/>
+      <p>(click)</p>
       <!-- <componentAnimated/> -->
     </div>
   </section>
@@ -19,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '~assets/variables.scss';
 
 .container {
@@ -32,5 +37,13 @@ export default {
 
 .content {
   width: $viz-width;
+  cursor: pointer;
+}
+
+.toD3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 22px;
 }
 </style>

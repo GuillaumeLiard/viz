@@ -1,7 +1,6 @@
 <template>
   <svg
-    width="200"
-    height="100">
+    viewBox="0 0 200 100">
     <slot/>
   </svg>
 </template>

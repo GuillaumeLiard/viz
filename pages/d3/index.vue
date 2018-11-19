@@ -9,6 +9,18 @@
         BlueBox Universal
       </h2>
       <BlueBoxUniversal/>
+      <h2>
+        Example d3 Component animated
+      </h2>
+      <D3component/>
+      <h2>
+        Example d3 Universal chart
+      </h2>
+      <D3UnivChart/>
+      <a href="https://bl.ocks.org/gordlea/27370d1eea8464b04538e6d8ced39e89">
+        link to original d3 chart
+      </a>
+
     </div>
   </section>
 </template>
@@ -16,11 +28,15 @@
 <script>
 import BlueBox from '~/components/d3/BlueBox.vue'
 import BlueBoxUniversal from '~/components/d3/BlueBoxUniversal.vue'
+import D3component from '~/components/d3/D3component.vue'
+import D3UnivChart from '~/components/d3/D3UnivChart.vue'
 
 export default {
   components: {
     BlueBox,
-    BlueBoxUniversal
+    BlueBoxUniversal,
+    D3component,
+    D3UnivChart
   },
   data: function() {
     return {
