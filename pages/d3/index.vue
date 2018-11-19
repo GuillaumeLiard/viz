@@ -2,6 +2,13 @@
   <section class="container">
     <div class="content">
       <h2>
+        Example d3 Universal chart
+      </h2>
+      <D3UnivChart/>
+      <a href="https://bl.ocks.org/gordlea/27370d1eea8464b04538e6d8ced39e89">
+        link to original d3 chart
+      </a>
+      <h2>
         BlueBox d3 client side
       </h2>
       <BlueBox/>
@@ -13,13 +20,6 @@
         Example d3 Component animated
       </h2>
       <D3component/>
-      <h2>
-        Example d3 Universal chart
-      </h2>
-      <D3UnivChart/>
-      <a href="https://bl.ocks.org/gordlea/27370d1eea8464b04538e6d8ced39e89">
-        link to original d3 chart
-      </a>
 
     </div>
   </section>
