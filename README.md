@@ -3,7 +3,7 @@
 > Universal visualization using nuxt &amp; svg
 
 # demo
-[https://guillaumeliard.github.io/viz/]
+https://guillaumeliard.github.io/viz/
 
 # svg server and client side rendered
 # nuxtjs, vuejs, svg
