@@ -12,6 +12,11 @@
       class="link"
       to="/shapes">shapes
     </nuxt-link>
+    <a
+      href="https://github.com/GuillaumeLiard/viz"
+      target="_blank">
+      github
+    </a>
     <nuxt/>
   </div>
 </template>
