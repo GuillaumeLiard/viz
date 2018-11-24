@@ -18,7 +18,10 @@ export default {
     Chart,
     // componentAnimated
   },
-  transition
+  transition: {
+    enterActiveClass: "animated zoomInDown fast",
+    leaveActiveClass: "animated zoomOutDown fast"
+  }
 }
 </script>
 
