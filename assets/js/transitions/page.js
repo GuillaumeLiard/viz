@@ -1,4 +1,4 @@
 export default {
-  enterActiveClass: "animated rotateInUpRight faster",
-  leaveActiveClass: "animated rotateOutUpRight faster"
+  enterActiveClass: "animated zoomInDown fast",
+  leaveActiveClass: "animated zoomOutDown fast"
 }

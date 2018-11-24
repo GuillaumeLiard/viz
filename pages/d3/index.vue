@@ -48,10 +48,7 @@ export default {
       ]
     }
   },
-  transition: {
-    enterActiveClass: "animated lightSpeedIn fast",
-    leaveActiveClass: "animated lightSpeedOut fast"
-  }
+  transition
 
 }
 </script>
