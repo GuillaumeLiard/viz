@@ -1,5 +1,17 @@
 <template>
   <div>
+    <nuxt-link
+      class="link"
+      to="/">home
+    </nuxt-link>
+    <nuxt-link
+      class="link"
+      to="/d3">d3 components
+    </nuxt-link>
+    <nuxt-link
+      class="link"
+      to="/infinityBox">infinity box
+    </nuxt-link>
     <nuxt/>
   </div>
 </template>
@@ -51,5 +63,9 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.link {
+  margin-right: 1rem;
 }
 </style>

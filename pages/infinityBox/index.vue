@@ -1,17 +1,21 @@
 <template>
   <section class="container">
     <div class="content">
-      <AreaBasic/>
+      <Chart/>
+      <p>(click)</p>
+      <!-- <componentAnimated/> -->
     </div>
   </section>
 </template>
 
 <script>
-import AreaBasic from '~/components/AreaBasic.vue'
+import Chart from '~/components/Chart.vue'
+// import componentAnimated from '~/components/componentAnimated.vue'
 
 export default {
   components: {
-    AreaBasic,
+    Chart,
+    // componentAnimated
   }
 }
 </script>
