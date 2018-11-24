@@ -7,7 +7,7 @@
   />
 </template>
 
-<style>
+<style scoped>
   rect {
     fill: rgb(0, 150 , 255);
   }
