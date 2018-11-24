@@ -10,7 +10,7 @@
     </nuxt-link>
     <nuxt-link
       class="link"
-      to="/infinityBox">infinity box
+      to="/shapes">shapes
     </nuxt-link>
     <nuxt/>
   </div>

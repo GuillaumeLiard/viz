@@ -1,27 +1,20 @@
 <template>
   <section class="container">
     <div class="content">
-      <Chart/>
-      <p>(click)</p>
-      <!-- <componentAnimated/> -->
+      <AreaBasic/>
     </div>
   </section>
 </template>
 
 <script>
-import Chart from '~/components/Chart.vue'
+import AreaBasic from '~/components/AreaBasic.vue'
 import transition from '~/assets/js/transitions/page.js'
-// import componentAnimated from '~/components/componentAnimated.vue'
 
 export default {
   components: {
-    Chart,
-    // componentAnimated
+    AreaBasic,
   },
-  transition: {
-    enterActiveClass: "animated zoomInDown fast",
-    leaveActiveClass: "animated zoomOutDown fast"
-  }
+  transition
 }
 </script>
 
@@ -50,4 +43,15 @@ export default {
   left: 0;
   font-size: 22px;
 }
+
+// .test-enter {
+//   opacity: 0;
+//   transform: translateY(-500px);
+//   transition: all 4s;
+// }
+// .test-enter-to {
+//   opacity: 1;
+//   transform: translateY(0);
+//   transition: all 0.6s;
+// }
 </style>
