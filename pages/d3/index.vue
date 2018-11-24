@@ -46,6 +46,10 @@ export default {
         [2, 9]
       ]
     }
+  },
+  transition: {
+    enterActiveClass: "animated rotateInUpRight faster",
+    leaveActiveClass: "animated rotateOutUpRight faster"
   }
 }
 </script>
@@ -54,11 +58,14 @@ export default {
 @import '~assets/variables.scss';
 
 .container {
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  // min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .content {
