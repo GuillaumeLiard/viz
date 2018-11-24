@@ -10,6 +10,7 @@
 
 <script>
 import Chart from '~/components/Chart.vue'
+import transition from '~/assets/js/transitions/page.js'
 // import componentAnimated from '~/components/componentAnimated.vue'
 
 export default {
@@ -17,10 +18,7 @@ export default {
     Chart,
     // componentAnimated
   },
-  transition: {
-    enterActiveClass: "animated rotateInUpRight faster",
-    leaveActiveClass: "animated rotateOutUpRight faster"
-  }
+  transition
 }
 </script>
 

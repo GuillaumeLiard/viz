@@ -8,15 +8,13 @@
 
 <script>
 import AreaBasic from '~/components/AreaBasic.vue'
+import transition from '~/assets/js/transitions/page.js'
 
 export default {
   components: {
     AreaBasic,
   },
-  transition: {
-    enterActiveClass: "animated rotateInUpRight faster",
-    leaveActiveClass: "animated rotateOutUpRight faster"
-  }
+  transition
 }
 </script>
 

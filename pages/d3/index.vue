@@ -30,6 +30,7 @@ import BlueBox from '~/components/d3/BlueBox.vue'
 import BlueBoxUniversal from '~/components/d3/BlueBoxUniversal.vue'
 import D3component from '~/components/d3/D3component.vue'
 import D3UnivChart from '~/components/d3/D3UnivChart.vue'
+import transition from '~/assets/js/transitions/page.js'
 
 export default {
   components: {
@@ -47,10 +48,7 @@ export default {
       ]
     }
   },
-  transition: {
-    enterActiveClass: "animated rotateInUpRight faster",
-    leaveActiveClass: "animated rotateOutUpRight faster"
-  }
+  transition
 }
 </script>
 
