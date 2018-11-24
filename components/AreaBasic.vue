@@ -39,23 +39,34 @@ export default {
       .domain([10, 130])
       .range([0, 960])
     },
-    // area: function() {
-    //   return d3.area()
-    //   .x(function(d) { return this.x(d.date); })
-    //   .y1(function(d) { return this.y(d.value); })
-    //   .y0(this.y(0))
-    // },
+    area: function() {
+      const out = d3.area()
+      // console.log("out", out);
+      // console.log("out", out);
+      return d3.area()
+      .x(function(d) { return 150 })
+      .y1(function(d) { return 2 })
+      .y0(30)
+      // .y1(function(d) { return this.y(d.value); })
+      // .y0(this.y(0))
+    },
     // path: function() {
     //   return this.area(this.data)
     // }
     path: function() {
-      return ''
+      return this.area(this.data)
     }
   },
   mounted: function() {
-
+    console.log('this.area')
+    console.log('this.data', this.data)
+    console.log(this.area(this.data))
   }
 }
 </script>
 <style scoped lang="scss">
+  .line {
+    stroke: red;
+    fill: blue;
+  }
 </style>

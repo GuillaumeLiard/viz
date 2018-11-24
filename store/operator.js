@@ -18,7 +18,7 @@ export const getters = {
     }
   }),
   getLine: state => {
-    console.log("line", line);
+    // console.log("line", line);
     // var line = line()
     //   .x(function(d) { return x(d.x) })
     //   .y(function(d) { return y(d.y) })
